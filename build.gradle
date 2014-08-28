@@ -1,0 +1,14 @@
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+
