@@ -1,10 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'application'
 
 repositories {
     mavenCentral()
 }
 
+mainClassName = "hello.Hello"
 
 dependencies {
     testCompile 'junit:junit:4.12'
