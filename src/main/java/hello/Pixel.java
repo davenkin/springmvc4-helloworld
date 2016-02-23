@@ -6,14 +6,20 @@ package hello;
 public class Pixel {
     private final int x;
     private final int y;
+    private final boolean isX;
 
-    public Pixel(int x, int  y) {
+    public Pixel(int x, int y, boolean isX) {
         this.x = x;
         this.y = y;
+        this.isX = isX;
     }
 
     public int getX() {
         return x;
+    }
+
+    public boolean isX() {
+        return isX;
     }
 
     @Override

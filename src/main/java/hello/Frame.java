@@ -21,9 +21,21 @@ public class Frame {
         int maxLength = calculateManLength();
         for (int xIndex = 1; xIndex <= maxLength; xIndex++) {
             for (int yIndex = 1; yIndex <= maxLength; yIndex++) {
-                Pixel currentPixel = new Pixel(xIndex, yIndex);
+                Pixel currentPixel = new Pixel(xIndex, yIndex, true);
                 if (pixels.contains(currentPixel)) {
-                    stringBuilder.append(X);
+                    Pixel originalCurrentPixel = null;
+                    boolean isX = false;
+                    for (Pixel pixel : pixels) {
+                        if (pixel.equals(currentPixel)) {
+                            isX = pixel.isX();
+                        }
+                    }
+
+                    if (isX) {
+                        stringBuilder.append(X);
+                    } else {
+                        stringBuilder.append("*");
+                    }
                 } else {
                     stringBuilder.append(SPACE);
                 }

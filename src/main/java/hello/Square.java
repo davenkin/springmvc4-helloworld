@@ -18,13 +18,13 @@ public class Square {
         Frame frame = new Frame();
 
         for (int x = 1; x <= length; x++) {
-            frame.addPixel(new Pixel(x, 1));
-            frame.addPixel(new Pixel(x, length));
+            frame.addPixel(new Pixel(x, 1, true));
+            frame.addPixel(new Pixel(x, length, true));
         }
 
         for (int y = 1; y < length; y++) {
-            frame.addPixel(new Pixel(1, y));
-            frame.addPixel(new Pixel(length, y));
+            frame.addPixel(new Pixel(1, y, true));
+            frame.addPixel(new Pixel(length, y, true));
         }
 
         return frame;

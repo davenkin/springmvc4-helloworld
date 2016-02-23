@@ -13,7 +13,7 @@ public class SquareTest {
     public void shouldConvertToFrame() {
         Square square = new Square(4);
         Frame frame = square.toFrame();
-        assertTrue(frame.containsPixel(new Pixel(1, 1)));
+        assertTrue(frame.containsPixel(new Pixel(1, 1, true)));
     }
 
     @Test(expected = RuntimeException.class)
