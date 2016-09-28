@@ -1,16 +1,14 @@
-apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'application'
+apply plugin: 'jetty'
 
 repositories {
     mavenCentral()
 }
 
-mainClassName = "hello.Hello"
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.guava:guava:19.0'
+    compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    providedCompile 'javax.servlet:servlet-api:2.5'
 }
 
 task wrapper(type: Wrapper) {
